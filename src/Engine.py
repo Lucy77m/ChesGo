@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QGridLayout, QPushButton, QSizePolicy
 from PyQt5.QtGui import QIcon, QPixmap, QDrag
-from PyQt5.QtCore import Qt, QMimeData
+from PyQt5.QtCore import pyqtSlot, Qt, QMimeData
 import chess
 import chess.engine
 
@@ -11,10 +11,12 @@ class ChessBoard(QWidget):
         self.layout = QGridLayout()
         self.setLayout(self.layout)
         self.main_window = main_window
+        self.selected_piece = None
         self.buttons = {}
         self.initialize_board()
 
     def initialize_board(self):
+        # 말 이미지 경로 설정
         self.piece_images = {
             "r": "src/black/rook.webp",
             "n": "src/black/knight.webp",
@@ -42,13 +44,14 @@ class ChessBoard(QWidget):
         self.update_board()
 
     def update_board(self):
+        # 체스판 상태를 GUI에 반영
         for row in range(8):
             for col in range(8):
                 piece = self.main_window.board.piece_at(chess.square(col, 7 - row))
                 button = self.buttons[(row, col)]
                 if piece:
                     pixmap = QPixmap(self.piece_images[piece.symbol()])
-                    scaled_pixmap = pixmap.scaled(80, 80, Qt.KeepAspectRatio)
+                    scaled_pixmap = pixmap.scaled(50, 50, Qt.KeepAspectRatio)  # 이미지 크기 조정
                     icon = QIcon(scaled_pixmap)
                     button.setIcon(icon)
                     button.setIconSize(scaled_pixmap.size())
@@ -62,8 +65,8 @@ class ChessBoard(QWidget):
 
         if move in self.main_window.board.legal_moves:
             self.main_window.board.push(move)
-
-            # AI가 수를 두도록 함
+            self.update_board()  # 사용자가 둔 수를 바로 반영
+            # AI 차례
             self.main_window.make_ai_move()
 
 class ChessButton(QPushButton):
@@ -72,7 +75,7 @@ class ChessButton(QPushButton):
         self.row = row
         self.col = col
         self.chessboard = chessboard
-        self.setAcceptDrops(True)
+        self.setAcceptDrops(True)  # 드롭을 허용
 
     def mousePressEvent(self, event):
         if self.icon():
@@ -85,7 +88,7 @@ class ChessButton(QPushButton):
 
     def dragEnterEvent(self, event):
         if event.mimeData().hasText():
-            event.acceptProposedAction()
+            event.acceptProposedAction()  # 드래그를 허용
 
     def dropEvent(self, event):
         from_pos = event.mimeData().text().split(',')
@@ -94,7 +97,7 @@ class ChessButton(QPushButton):
         to_row = self.row
         to_col = self.col
         self.chessboard.handle_move(from_row, from_col, to_row, to_col)
-        event.acceptProposedAction()
+        event.acceptProposedAction()  # 드롭을 허용
 
 class ChesGo(QMainWindow):
     def __init__(self):
@@ -112,7 +115,7 @@ class ChesGo(QMainWindow):
         if not self.board.is_game_over():
             result = self.engine.play(self.board, chess.engine.Limit(time=2.0))
             self.board.push(result.move)
-            self.chess_board_widget.update_board()  # AI가 둔 수를 반영하여 보드를 업데이트
+            self.chess_board_widget.update_board()  # AI가 둔 수를 반영
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

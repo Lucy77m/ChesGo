@@ -1,4 +1,3 @@
-![ChessGo](https://github.com/user-attachments/assets/43687ad5-b9a0-43e8-ae75-8ca0a51491bf)
 
 # What is this
 

@@ -13,7 +13,6 @@
 
 
 
-
 # ChesGo 1.0
 # Main Engine
 
@@ -122,7 +121,7 @@ class ChesGo(QMainWindow):
         self.setGeometry(100, 100, 800, 800)
 
         self.board = chess.Board()
-        self.engine = chess.engine.SimpleEngine.popen_uci("stockfish path here") 
+        self.engine = chess.engine.SimpleEngine.popen_uci("stockfish/stockfish-windows-x86-64-sse41-popcnt.exe") 
 
         self.chesswg = ChessBoard(self)
         self.setCentralWidget(self.chesswg)

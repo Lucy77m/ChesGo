@@ -2,7 +2,7 @@
 
 # What is this
 
-Python으로 만든 Stockfish 16.1 기반 체스봇입니다. PyQt5와 python-chess 라이브러리를 사용하였습니다.
+Python으로 만든 Stockfish 16.1 기반 **오픈소스** 체스봇입니다. PyQt5와 python-chess 라이브러리를 사용하였습니다.
 
 # How it works
 

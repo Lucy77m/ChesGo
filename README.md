@@ -1,4 +1,4 @@
-![ChessGo (1)](https://github.com/user-attachments/assets/73e14eff-027c-4567-8560-bf44fadd17d8)
+![ChessGo (2)](https://github.com/user-attachments/assets/3d18b324-ef71-41af-9d6a-e02ece32c26f)
 
 # What is this
 

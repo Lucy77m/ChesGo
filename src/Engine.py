@@ -120,7 +120,7 @@ class ChessButton(QPushButton):
 class ChessGo(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("ChesGo")
+        self.setWindowTitle("ChessGo")
         self.setGeometry(100, 100, 800, 800)
 
         self.board = chess.Board()

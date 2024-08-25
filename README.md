@@ -1,4 +1,4 @@
-![ChessGo-Photoroom](https://github.com/user-attachments/assets/8270d30e-f94f-412b-8e03-eccab5ca84be)
+![ChessGo](https://github.com/user-attachments/assets/5423dbb4-f1e4-4fef-8e64-6f0eb2c341f9)
 
 # What is this
 

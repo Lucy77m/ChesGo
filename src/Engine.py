@@ -3,7 +3,7 @@
 
 # 본 소프트웨어는 오픈소스 소프트웨어로, 아래의 조건을 준수하는 경우에 한해 사용, 복제, 수정, 병합, 출판, 배포 및 2차 저작물을 생성할 수 있습니다.
 
-# 소프트웨어의 모든 복제물, 수정물 또는 배포물에는 반드시 원 저작자인 "Lucy77m"와 ChesGo 프로젝트의 출처가 명시되어야 합니다. 출처 명시는 소스코드 내의 적절한 위치(파일 상단 주석 등)에 포함되어야 합니다.
+# 소프트웨어의 모든 복제물, 수정물 또는 배포물에는 반드시 원 저작자인 "Lucy77m"와 ChessGo 프로젝트의 출처가 명시되어야 합니다. 출처 명시는 소스코드 내의 적절한 위치(파일 상단 주석 등)에 포함되어야 합니다.
 
 # 상업적 또는 비상업적 용도로 본 소프트웨어를 사용할 수 있습니다.
 
@@ -117,7 +117,7 @@ class ChessButton(QPushButton):
         self.chessboard.handle_move(from_row, from_col, to_row, to_col)
         event.acceptProposedAction()  
 
-class ChesGo(QMainWindow):
+class ChessGo(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("ChesGo")
@@ -137,6 +137,6 @@ class ChesGo(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = ChesGo()
+    window = ChessGo()
     window.show()
     sys.exit(app.exec_())

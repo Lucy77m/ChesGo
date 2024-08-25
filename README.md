@@ -14,7 +14,7 @@ Python으로 만든 Stockfish 16.1 기반 **오픈소스** 체스봇입니다. P
 1. [Stockfish를 다운받습니다.](https://stockfishchess.org/)
 2. Stockfish 폴더를 `src` 폴더 안에 넣습니다.
 3. Engine.py의 엔진 파일의 경로를 바꿉니다. (22번째 줄)
-4. src 폴더안에 있는 `install.bat`을 실행합니다.
+4. `install.bat`을 실행합니다.
 5. `python main.py`라는 구문을 실행합니다. (cmd에서 실행시 cd src후 구문을 실행해야 오류가 나지 않습니다.)
 
 # Versions

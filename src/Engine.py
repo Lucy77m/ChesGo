@@ -19,7 +19,7 @@
 import chess.engine
 
 class ChessEngine:
-    def __init__(self, Engpth="stockfish/stockfish-windows-x86-64-sse41-popcnt.exe"):
+    def __init__(self, Engpth="stockfish/your stockfish file name"):
         self.board = chess.Board()
         self.engine = chess.engine.SimpleEngine.popen_uci(Engpth)
 

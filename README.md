@@ -1,4 +1,4 @@
-
+![ChessGoQ](https://github.com/user-attachments/assets/95ef3dda-0615-4715-ba45-ee311556dee6)
 
 # What is this
 
@@ -18,9 +18,9 @@ Python으로 만든 Stockfish 16.1 기반 **오픈소스** 체스봇입니다. P
 5. `python Engine.py`라는 구문을 실행합니다.
 
 # photos
-![image](https://github.com/user-attachments/assets/a1573c18-5a28-4bde-b2ca-db0f523ae621)
+![image](https://github.com/user-attachments/assets/136b281f-01d1-4ce6-9593-f8a33661dc3a)
 
-![image](https://github.com/user-attachments/assets/05ba9410-f00a-4f90-bfa1-963eeb65690f)
+![image](https://github.com/user-attachments/assets/9b180a5a-7205-45ea-93d7-8c1f5a7eb740)
 
 
 ###### 아 라면먹고싶당

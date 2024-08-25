@@ -23,4 +23,4 @@ Python으로 만든 Stockfish 16.1 기반 **오픈소스** 체스봇입니다. P
 ![image](https://github.com/user-attachments/assets/9b180a5a-7205-45ea-93d7-8c1f5a7eb740)
 
 
-###### 아 라면먹고싶당
+###### 로고는 포토샵으로 제작하였습니다.
